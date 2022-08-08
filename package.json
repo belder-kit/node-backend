@@ -15,7 +15,7 @@
   "dependencies": {
     "@luchanso/datasource-sql": "2.0.0",
     "@types/express": "^4.17.13",
-    "@types/graphql-upload": "8.0.7",
+    "@types/graphql-upload": "8.0.11",
     "apollo-server": "3.5.0",
     "apollo-server-core": "3.5.0",
     "apollo-server-errors": "3.3.1",

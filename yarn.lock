@@ -1923,15 +1923,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/graphql-upload@npm:8.0.7":
-  version: 8.0.7
-  resolution: "@types/graphql-upload@npm:8.0.7"
+"@types/graphql-upload@npm:8.0.11":
+  version: 8.0.11
+  resolution: "@types/graphql-upload@npm:8.0.11"
   dependencies:
     "@types/express": "*"
     "@types/fs-capacitor": "*"
     "@types/koa": "*"
-    graphql: ^15.3.0
-  checksum: a847d3f29c6194344c56fd9436b5f59adbad0b95f3c3e9ab0cf19e822ed3ebfc786d73c432d302106303803dd4989fa24bdd1e3b3b0c995a14982c6965086960
+    graphql: 0.13.1 - 16
+  checksum: 8af6c023ed8c9118950a6695ddc682781f4de8619e7c5bc49f3a2e0b0a25f04c55a53ecc9879de264665ed19409293ce65a2384ab14eb4c77b69756e37a02eaa
   languageName: node
   linkType: hard
 
@@ -5102,17 +5102,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"graphql@npm:0.13.1 - 16":
+  version: 16.5.0
+  resolution: "graphql@npm:16.5.0"
+  checksum: a82a926d085818934d04fdf303a269af170e79de943678bd2726370a96194f9454ade9d6d76c2de69afbd7b9f0b4f8061619baecbbddbe82125860e675ac219e
+  languageName: node
+  linkType: hard
+
 "graphql@npm:14.0.2 - 14.2.0 || ^14.3.1 || ^15.0.0, graphql@npm:15.5.1":
   version: 15.5.1
   resolution: "graphql@npm:15.5.1"
   checksum: 7e45ae27021e5bafd2a3ce557e708606ff28504aae705654764fa6239b0151d014a90cbd4c68300f4f95a9074820aaee9b1f25b560ff089c8db0b49563e34080
-  languageName: node
-  linkType: hard
-
-"graphql@npm:^15.3.0":
-  version: 15.8.0
-  resolution: "graphql@npm:15.8.0"
-  checksum: 423325271db8858428641b9aca01699283d1fe5b40ef6d4ac622569ecca927019fce8196208b91dd1d8eb8114f00263fe661d241d0eb40c10e5bfd650f86ec5e
   languageName: node
   linkType: hard
 
@@ -6806,7 +6806,7 @@ __metadata:
     "@graphql-codegen/typescript-resolvers": 2.4.2
     "@luchanso/datasource-sql": 2.0.0
     "@types/express": ^4.17.13
-    "@types/graphql-upload": 8.0.7
+    "@types/graphql-upload": 8.0.11
     apollo: 2.33.9
     apollo-server: 3.5.0
     apollo-server-core: 3.5.0
