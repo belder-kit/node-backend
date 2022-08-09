@@ -1,5 +1,5 @@
 # bulder
-FROM node:16-alpine3.12 AS builder
+FROM node:17-alpine3.12 AS builder
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY ./src ./src
 RUN yarn build
 
 # runner
-FROM node:16-alpine3.12
+FROM node:17-alpine3.12
 
 RUN addgroup -S node-group && adduser -S node-app -G node-group
 USER node-app
