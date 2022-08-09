@@ -1,6 +1,15 @@
-Basic backend for all
+# Backend server for any stratups
 
-Development Run:
+- postgresql
+- apollo / graphql
+- prisma
+- nexus
+
+Development process:
+
 ```
-docker compose up --build --force-recreate --remove-orphans
+yarn install
+yarn dev:db # run in other terminal local database
+yarn prisma:migrate # initialize database
+yarn start # hot-reload development
 ```

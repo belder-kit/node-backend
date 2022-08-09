@@ -5,8 +5,6 @@ services:
     image: postgres:13.4-alpine
     ports:
       - 5432:5432
-    networks:
-      - app
     environment:
       POSTGRES_USER: pg
       POSTGRES_PASSWORD: qwe
@@ -23,8 +21,3 @@ services:
     image: adminer
     ports:
       - 8080:8080
-    networks:
-      - app
-networks:
-  app:
-    name: app

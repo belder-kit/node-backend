@@ -1,6 +1,5 @@
-import { ExpressContext } from "apollo-server-express";
-// import { createDataloaders } from "../loaders";
+import { DataSources } from "../datasources";
 
-export const createContext = ({}: ExpressContext) => ({
-  // dataloaders: createDataloaders()
-});
+export type Context = {
+  dataSources: DataSources;
+};

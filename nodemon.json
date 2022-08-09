@@ -1,0 +1,4 @@
+{
+  "watch": ["src", "prisma"],
+  "ext": "ts,d.ts,prisma"
+}

@@ -1,12 +1,9 @@
-import { Database } from "./database";
-
-const database = new Database({
-  client: 'pg',
-  connection: process.env.PG_CONNECTION_STRING
-});
+import { prisma } from "./prisma";
+import { snowflakeId } from "./snowflakeid";
 
 export const dataSources = () => ({
-  database
+  prisma,
+  snowflakeId,
 });
 
 export type DataSources = ReturnType<typeof dataSources>;

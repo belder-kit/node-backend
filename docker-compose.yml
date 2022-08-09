@@ -6,7 +6,7 @@ services:
     environment:
       PG_CONNECTION_STRING: "postgres://pg:qwe@db/db"
       DEBUG: "*"
-      # NODE_ENV: "production"
+      NODE_ENV: "production"
     depends_on:
       - db
     deploy:
