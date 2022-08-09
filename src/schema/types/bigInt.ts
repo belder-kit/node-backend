@@ -1,4 +1,4 @@
-import { Kind } from "graphql";
+import { GraphQLScalarSerializer, Kind } from "graphql";
 import { scalarType } from "nexus";
 
 export const BigIntScalar = scalarType({
@@ -10,8 +10,12 @@ export const BigIntScalar = scalarType({
     return BigInt(value);
   },
 
-  serialize(value: bigint) {
-    return value.toString();
+  serialize: (value: unknown) => {
+    if (typeof value === "bigint") {
+      return value.toString();
+    }
+
+    return value;
   },
 
   parseLiteral(ast) {
