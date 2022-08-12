@@ -9,7 +9,13 @@ Development process:
 
 ```
 yarn install
-yarn dev:db # run in other terminal local database
+yarn dev:db # run local database
 yarn prisma:migrate # initialize database
 yarn start # hot-reload development
+```
+
+Database view:
+
+```
+yarn prisma:studio
 ```

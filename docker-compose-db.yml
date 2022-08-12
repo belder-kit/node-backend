@@ -16,8 +16,3 @@ services:
           cpus: "0.5"
         reservations:
           memory: 128M
-  # admin panel for database
-  adminer:
-    image: adminer
-    ports:
-      - 8080:8080
