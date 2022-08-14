@@ -11,4 +11,4 @@ graphql.schema.json
 !.yarn/sdks
 !.yarn/versions
 
-generated
+src/generated

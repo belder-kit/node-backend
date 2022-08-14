@@ -13,7 +13,9 @@ export const schema = makeSchema({
     Mutation,
   },
   sourceTypes: {
-    modules: [{ module: resolve("./generated/prisma"), alias: "PrismaClient" }],
+    modules: [
+      { module: resolve("./src/generated/prisma"), alias: "PrismaClient" },
+    ],
     mapping: {
       BigInt: "bigint",
     },
@@ -21,8 +23,8 @@ export const schema = makeSchema({
   outputs: process.env.SKIP_GENERATE_NEXUS
     ? undefined
     : {
-        schema: resolve("./generated/graphql/index.graphql"),
-        typegen: resolve("./generated/nexus/index.ts"),
+        schema: resolve("./src/generated/graphql/index.graphql"),
+        typegen: resolve("./src/generated/nexus/index.ts"),
       },
   contextType: {
     module: resolve("./src/context/index.ts"),
