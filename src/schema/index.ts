@@ -14,7 +14,10 @@ export const schema = makeSchema({
   },
   sourceTypes: {
     modules: [
-      { module: resolve("./src/generated/prisma"), alias: "PrismaClient" },
+      {
+        module: resolve("./src/generated/prisma/index.d.ts"),
+        alias: "prismaClient",
+      },
     ],
     mapping: {
       BigInt: "bigint",
