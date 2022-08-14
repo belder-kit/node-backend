@@ -10,7 +10,7 @@
     "dev:db": "docker compose -f ./docker-compose-db.yml up",
     "dev:nexus": "nodemon -e ts --watch src --exec \"yarn nexus:generate\"",
     "start": "nodemon -e ts,d.ts --watch src --exec \"yarn nexus:generate && yarn build && yarn dev:app\"",
-    "build": "tsc",
+    "build": "cp -r src/generated/prisma build/generated && tsc",
     "prisma:studio": "yarn prisma studio",
     "prisma:generate": "yarn pnpify prisma generate",
     "prisma:push": "yarn pnpify prisma db push",
