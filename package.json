@@ -16,7 +16,7 @@
     "prisma:push": "yarn pnpify prisma db push",
     "prisma:migrate": "yarn pnpify prisma migrate dev",
     "nexus:generate": "yarn ts-node-dev --project tsconfig.json --transpile-only --no-notify ./src/schema/index.ts",
-    "postinstall": "yarn prisma:generate && yarn nexus:generate"
+    "postinstall": "mkdir build && yarn prisma:generate && yarn nexus:generate"
   },
   "dependencies": {
     "@luchanso/snowflakeid": "1.0.7",
