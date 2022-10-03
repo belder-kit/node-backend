@@ -5,9 +5,9 @@ export function addBook(t: ObjectDefinitionBlock<"Mutation">) {
   t.field("addBook", {
     type: "Book",
     args: { title: nonNull("String"), author: nonNull("String") },
-    resolve(_, { title, author }, { dataSources: { prisma, snowflakeId } }) {
+    resolve(_, { title, author }, { dataSources: { prisma } }) {
       return prisma.book.create({
-        data: { title, author, id: snowflakeId.next() },
+        data: { title, author },
       });
     },
   });

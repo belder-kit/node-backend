@@ -1,13 +1,11 @@
 import { makeSchema } from "nexus";
 import { resolve } from "path";
-import { BigIntScalar } from "./types/bigInt";
 import { Book } from "./types/book";
 import { Mutation } from "./mutation";
 import { Query } from "./query";
 
 export const schema = makeSchema({
   types: {
-    BigIntScalar,
     Query,
     Book,
     Mutation,

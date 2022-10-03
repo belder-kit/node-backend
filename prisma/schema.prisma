@@ -12,7 +12,7 @@ datasource db {
 }
 
 model Book {
-  id     BigInt  @id @unique
+  id     String  @id @unique @default(cuid())
   title  String?
   author String?
 }
