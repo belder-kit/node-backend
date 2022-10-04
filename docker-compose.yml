@@ -1,12 +1,9 @@
 version: "3.9"
 services:
   backend:
-    container_name: node-backend
     build: .
-    environment:
-      PG_CONNECTION_STRING: "postgres://pg:qwe@db/db"
-      DEBUG: "*"
-      NODE_ENV: "production"
+    env_file:
+      - .env
     depends_on:
       - db
     deploy:
@@ -24,46 +21,18 @@ services:
     container_name: postgres-database
     image: postgres:14.5-alpine
     ports:
-      - 5432:5432
+      # throw database ports only for local access
+      - "127.0.0.1:5432:5432"
     networks:
       - app
-    environment:
-      POSTGRES_USER: pg
-      POSTGRES_PASSWORD: qwe
-      POSTGRES_DB: db
+    env_file:
+      - .env
     deploy:
       resources:
         limits:
           memory: 256M
         reservations:
           memory: 256M
-  # admin panel for database
-  adminer:
-    image: adminer
-    ports:
-      - 8080:8080
-    networks:
-      - app
-  reverse-proxy:
-    build:
-      context: https://github.com/fastup-kit/reverse-proxy.git#main
-    ports:
-      - 3000:80
-    environment:
-      NGINX_ENTRYPOINT_QUIET_LOGS: 1
-    deploy:
-      restart_policy:
-        condition: on-failure
-        delay: 5s
-      resources:
-        limits:
-          memory: 128M
-        reservations:
-          memory: 128M
-    networks:
-      - app
-    depends_on:
-      - backend
 networks:
   app:
     name: app

@@ -1,13 +1,13 @@
 import { makeSchema } from "nexus";
 import { resolve } from "path";
-import { Book } from "./types/book";
+import * as types from "./types";
 import { Mutation } from "./mutation";
 import { Query } from "./query";
 
 export const schema = makeSchema({
   types: {
+    ...types,
     Query,
-    Book,
     Mutation,
   },
   sourceTypes: {
@@ -17,9 +17,6 @@ export const schema = makeSchema({
         alias: "prismaClient",
       },
     ],
-    mapping: {
-      BigInt: "bigint",
-    },
   },
   outputs: process.env.SKIP_GENERATE_NEXUS
     ? undefined

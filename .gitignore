@@ -3,6 +3,7 @@ node_modules
 build
 graphql.schema.json
 
+.env
 .pnp.*
 .yarn/*
 !.yarn/patches

@@ -8,6 +8,7 @@ COPY .yarnrc.yml ./package.json ./yarn.lock ./tsconfig.json ./
 RUN yarn set version berry
 RUN yarn install
 COPY ./src ./src
+COPY ./prisma ./prisma
 RUN yarn generate
 RUN yarn build
 
@@ -21,7 +22,8 @@ WORKDIR /app
 
 COPY --chown=node-app:node-group --from=builder ./app/.yarn ./.yarn
 COPY --chown=node-app:node-group --from=builder ./app/build ./build
+COPY --chown=node-app:node-group --from=builder ./app/prisma ./prisma
 COPY --chown=node-app:node-group --from=builder ./app/package.json ./app/yarn.lock ./app/.yarnrc.yml ./
 COPY --chown=node-app:node-group --from=builder ./app/.pnp* ./
 
-CMD NODE_ENV=production yarn prod:start
+CMD yarn prod:migrate && yarn prod:start
