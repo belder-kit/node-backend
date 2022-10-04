@@ -1,28 +1,11 @@
 import "dotenv/config";
-import fastify, { FastifyInstance } from "fastify";
+import fastify from "fastify";
 import { ApolloServer } from "apollo-server-fastify";
-import { ApolloServerPlugin } from "apollo-server-plugin-base";
-import {
-  ApolloServerPluginDrainHttpServer,
-  ApolloServerPluginLandingPageLocalDefault,
-} from "apollo-server-core";
-import { plugins } from "./plugins";
+import { createPlugins } from "./plugins";
 import { dataSources } from "./datasources";
 import { schema } from "./schema";
 
 const PORT = Number(process.env.PORT) || 80;
-
-function fastifyAppClosePlugin(app: FastifyInstance): ApolloServerPlugin {
-  return {
-    async serverWillStart() {
-      return {
-        async drainServer() {
-          await app.close();
-        },
-      };
-    },
-  };
-}
 
 async function startApolloServer() {
   const app = fastify();
@@ -32,12 +15,7 @@ async function startApolloServer() {
     dataSources,
     csrfPrevention: true,
     cache: "bounded",
-    plugins: [
-      fastifyAppClosePlugin(app),
-      ApolloServerPluginDrainHttpServer({ httpServer: app.server }),
-      ApolloServerPluginLandingPageLocalDefault({ embed: true }),
-      ...plugins,
-    ],
+    plugins: createPlugins(app),
   });
 
   await server.start();
