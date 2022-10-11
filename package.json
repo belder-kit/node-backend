@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@prisma/client": "4.2.1",
-    "@yarnpkg/pnpify": "4.0.0-rc.14",
+    "@yarnpkg/pnpify": "4.0.0-rc.25",
     "apollo": "2.34.0",
     "apollo-server": "3.10.1",
     "apollo-server-core": "3.10.1",
