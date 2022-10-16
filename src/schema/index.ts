@@ -25,7 +25,7 @@ export const schema = makeSchema({
         typegen: resolve("./src/generated/nexus/index.ts"),
       },
   contextType: {
-    module: resolve("./src/context/index.ts"),
-    export: "Context",
+    module: resolve("./src/datasources/index.ts"),
+    export: "DataSources",
   },
 });

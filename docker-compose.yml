@@ -1,7 +1,8 @@
 version: "3.9"
 services:
   backend:
-    build: .
+    container_name: node-backend
+    image: localhost:5000/${PROJECT_NAME}/node-backend
     env_file:
       - .env
     depends_on:
@@ -18,10 +19,10 @@ services:
     networks:
       - app
   db:
-    container_name: postgres-database
+    container_name: node-backend-database
     image: postgres:14.5-alpine
     ports:
-      # throw database ports only for local access
+      # throw database ports only for local access via ssh
       - "127.0.0.1:5432:5432"
     networks:
       - app

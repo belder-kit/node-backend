@@ -1,4 +1,4 @@
-# Backend server for any stratups
+# Backend stack for any stratups
 
 - postgresql
 - apollo / graphql
@@ -39,3 +39,9 @@ Make database access from localhost:
 ```sh
 ssh -L 5432:localhost:5432 database.machine.com
 ```
+
+## Setup github actions pipline
+
+Create github actions secrets with env which you can see in `.env.example`
+
+And infrastructure secrets: https://github.com/fastup-kit/deploy-scripts

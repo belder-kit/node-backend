@@ -1,12 +1,20 @@
 import { mutationType } from "nexus";
-import { addBook } from "./addBook";
-import { deleteBook } from "./deleteBook";
-import { updateBook } from "./updateBook";
+import { createProduct } from "./createProduct";
+import { completePayment } from "./completePayment";
+import { createPayment } from "./createPayment";
+import { deleteProduct } from "./deleteProduct";
+import { subscribe } from "./subscribe";
+import { updateProduct } from "./updateProduct";
 
 export const Mutation = mutationType({
   definition(t) {
-    addBook(t);
-    updateBook(t);
-    deleteBook(t);
+    createProduct(t);
+    updateProduct(t);
+    deleteProduct(t);
+
+    subscribe(t);
+
+    createPayment(t);
+    completePayment(t);
   },
 });

@@ -1,13 +1,9 @@
-import {
-  ApolloServerPluginDrainHttpServer,
-  ApolloServerPluginLandingPageLocalDefault,
-  ApolloServerPluginInlineTrace,
-  PluginDefinition,
-} from "apollo-server-core";
-import { ApolloServerPlugin } from "apollo-server-plugin-base";
+import { fastifyApolloDrainPlugin } from "@luchanso/apollo-fastify";
+import { ApolloServerPlugin, BaseContext } from "@apollo/server";
+import { ApolloServerPluginLandingPageLocalDefault } from "@apollo/server/plugin/landingPage/default";
 import { FastifyInstance } from "fastify";
 
-const plugins: PluginDefinition[] = [
+const plugins: ApolloServerPlugin<BaseContext>[] = [
   {
     requestDidStart: async () => {
       return {
@@ -31,13 +27,14 @@ function fastifyAppClosePlugin(app: FastifyInstance): ApolloServerPlugin {
   };
 }
 
-export function createPlugins(app: FastifyInstance): PluginDefinition[] {
-  plugins.push(fastifyAppClosePlugin(app));
-  plugins.push(ApolloServerPluginDrainHttpServer({ httpServer: app.server }));
+export function createPlugins(
+  fastify: FastifyInstance
+): ApolloServerPlugin<BaseContext>[] {
+  plugins.push(fastifyAppClosePlugin(fastify));
+  plugins.push(fastifyApolloDrainPlugin(fastify));
 
   if (process.env.NODE_ENV !== "production") {
     plugins.push(ApolloServerPluginLandingPageLocalDefault({ embed: true }));
-    plugins.push(ApolloServerPluginInlineTrace());
   }
 
   return plugins;

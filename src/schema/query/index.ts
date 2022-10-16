@@ -1,8 +1,8 @@
 import { queryType } from "nexus";
-import { books } from "./books";
+import { products } from "./products";
 
 export const Query = queryType({
   definition(t) {
-    books(t);
+    products(t);
   },
 });
