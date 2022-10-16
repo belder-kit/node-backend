@@ -2046,18 +2046,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"apollo-server-plugin-base@npm:3.6.2":
-  version: 3.6.2
-  resolution: "apollo-server-plugin-base@npm:3.6.2"
-  dependencies:
-    apollo-server-types: ^3.6.2
-  peerDependencies:
-    graphql: ^15.3.0 || ^16.0.0
-  checksum: 8430aa65619d96cd9e15e46b7352bca5abda3f7e4b19d3a289cf337263cdd5bc0d808d2ef110ff76358fea9cf63e62c63d0a8502f1555ee7bb8c784c64b52b6d
-  languageName: node
-  linkType: hard
-
-"apollo-server-plugin-base@npm:^3.6.2, apollo-server-plugin-base@npm:^3.6.3":
+"apollo-server-plugin-base@npm:3.6.3, apollo-server-plugin-base@npm:^3.6.2, apollo-server-plugin-base@npm:^3.6.3":
   version: 3.6.3
   resolution: "apollo-server-plugin-base@npm:3.6.3"
   dependencies:
@@ -5214,7 +5203,7 @@ __metadata:
     apollo-server-core: 3.10.2
     apollo-server-errors: 3.3.1
     apollo-server-fastify: 3.10.2
-    apollo-server-plugin-base: 3.6.2
+    apollo-server-plugin-base: 3.6.3
     cross-env: 7.0.3
     dotenv: 16.0.3
     fastify: 4.7.0
