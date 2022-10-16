@@ -290,16 +290,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@as-integrations/fastify@npm:0.10.0":
-  version: 0.10.0
-  resolution: "@as-integrations/fastify@npm:0.10.0"
+"@as-integrations/fastify@npm:0.10.1":
+  version: 0.10.1
+  resolution: "@as-integrations/fastify@npm:0.10.1"
   dependencies:
     fastify-plugin: 4.2.1
   peerDependencies:
     "@apollo/server": ^4.0.0-alpha
     fastify: ^4.4.0
     graphql: ^16.5.0
-  checksum: 45941c6343d5cbbad8f129cc8a563491b11344bcb7cc99c40b5a921113af3c6409e02e6a170574d7c2ba805bb91d140ac89b0fc3adaaee41d45b8b242b128721
+  checksum: 8309504192ddaef939933413ab20f4ec1e80d0d23b324119aa23f061c5c6c06e30941f989bf56181723a49f2b4ae248bd558719cf821d7d7bd86cdbd303b8ff7
   languageName: node
   linkType: hard
 
@@ -5201,7 +5201,7 @@ __metadata:
   resolution: "node-backend@workspace:."
   dependencies:
     "@apollo/server": ^4.0.0-rc.16
-    "@as-integrations/fastify": 0.10.0
+    "@as-integrations/fastify": 0.10.1
     "@fastify/cookie": 8.3.0
     "@luchanso/apollo-fastify": ^0.10.0
     "@prisma/client": 4.2.1

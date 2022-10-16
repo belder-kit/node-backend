@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@apollo/server": "^4.0.0-rc.16",
-    "@as-integrations/fastify": "0.10.0",
+    "@as-integrations/fastify": "0.10.1",
     "@fastify/cookie": "8.3.0",
     "@luchanso/apollo-fastify": "^0.10.0",
     "@prisma/client": "4.2.1",
