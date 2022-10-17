@@ -21,7 +21,7 @@
     "nexus:generate": "yarn ts-node-dev --project tsconfig.json --transpile-only --no-notify ./src/schema/index.ts",
     "docker:build": "docker build . -t localhost:5000/project/node-backend",
     "docker:start": "PROJECT_NAME=project docker-compose up -d",
-    "postinstall": "cat .env.example > .env",
+    "setup-env": "cat .env.example > .env",
     "prod:start": "node build/index",
     "prod:migrate": "yarn pnpify prisma migrate deploy"
   },
