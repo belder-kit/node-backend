@@ -64,13 +64,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/server@npm:^4.0.0-rc.16":
-  version: 4.0.0-rc.18
-  resolution: "@apollo/server@npm:4.0.0-rc.18"
+"@apollo/server@npm:4.0.0":
+  version: 4.0.0
+  resolution: "@apollo/server@npm:4.0.0"
   dependencies:
     "@apollo/cache-control-types": ^1.0.2
     "@apollo/server-gateway-interface": ^1.0.3
-    "@apollo/usage-reporting-protobuf": ^4.0.0-rc.2
+    "@apollo/usage-reporting-protobuf": ^4.0.0
     "@apollo/utils.createhash": ^1.1.0
     "@apollo/utils.fetcher": ^1.0.0
     "@apollo/utils.isnodelike": ^1.1.0
@@ -95,11 +95,20 @@ __metadata:
     whatwg-mimetype: ^3.0.0
   peerDependencies:
     graphql: ^16.6.0
-  checksum: 007199e23c94314cf47a9455ab794c3dc4dfc4396780e6e8c0c63517447077ef55e4553bdc8fa08e344f6fe79a2a4d7c05e4338ae88db377d433328a14a26363
+  checksum: 3eb6c146e4dca0a7b8d3adb8870178e3a7893a238d364789beb057333cfa6f95031a7d94b58f1ee8c624e485e472122ad3423081d189fc1fd2bc646afdc9beec
   languageName: node
   linkType: hard
 
-"@apollo/usage-reporting-protobuf@npm:^4.0.0-alpha.1, @apollo/usage-reporting-protobuf@npm:^4.0.0-rc.2":
+"@apollo/usage-reporting-protobuf@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@apollo/usage-reporting-protobuf@npm:4.0.0"
+  dependencies:
+    "@apollo/protobufjs": 1.2.6
+  checksum: 86a0d392932d8103bc14d0900dcd5d209eedf8aeb598c9c54fb8aa44bda59f3fab4c03f1358acdbf9c523858c24ecad12677a45e46c17a259e21f18c13a7bf49
+  languageName: node
+  linkType: hard
+
+"@apollo/usage-reporting-protobuf@npm:^4.0.0-alpha.1":
   version: 4.0.0-rc.2
   resolution: "@apollo/usage-reporting-protobuf@npm:4.0.0-rc.2"
   dependencies:
@@ -290,16 +299,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@as-integrations/fastify@npm:0.10.0":
-  version: 0.10.0
-  resolution: "@as-integrations/fastify@npm:0.10.0"
+"@as-integrations/fastify@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@as-integrations/fastify@npm:1.1.0"
   dependencies:
-    fastify-plugin: 4.2.1
+    fastify-plugin: 4.3.0
   peerDependencies:
-    "@apollo/server": ^4.0.0-alpha
+    "@apollo/server": ^4.0.0
     fastify: ^4.4.0
-    graphql: ^16.5.0
-  checksum: 45941c6343d5cbbad8f129cc8a563491b11344bcb7cc99c40b5a921113af3c6409e02e6a170574d7c2ba805bb91d140ac89b0fc3adaaee41d45b8b242b128721
+  checksum: cff74aadc8e25b28eb826cacb285232a359fb325f4e72670c36901ea7f1ca4693a405aea4e6d1a9a743d0c42c048781030cf5294f44023bfbea2bd8ffd5425f6
   languageName: node
   linkType: hard
 
@@ -608,7 +616,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@luchanso/apollo-fastify@npm:^0.10.0":
+"@luchanso/apollo-fastify@npm:0.10.0":
   version: 0.10.0
   resolution: "@luchanso/apollo-fastify@npm:0.10.0"
   dependencies:
@@ -904,31 +912,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prisma/client@npm:4.2.1":
-  version: 4.2.1
-  resolution: "@prisma/client@npm:4.2.1"
+"@prisma/client@npm:4.4.0":
+  version: 4.4.0
+  resolution: "@prisma/client@npm:4.4.0"
   dependencies:
-    "@prisma/engines-version": 4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826
+    "@prisma/engines-version": 4.4.0-66.f352a33b70356f46311da8b00d83386dd9f145d6
   peerDependencies:
     prisma: "*"
   peerDependenciesMeta:
     prisma:
       optional: true
-  checksum: 2eefe7182f2ebc26c35777e9ff22acb9c1d1f6e0988c518b32063d7677d066ab7258d13a0ee851addc77526dc0de9c05a02d5688c55377d65ddee1b6866b9e95
+  checksum: 7ecd1dbfd7158baef5365beaead3d863841812cd939b7b1f5287f163281119de311ffdeb422d1105b15c939b50ca3760bb459ede63a34d5f7acda510d7c30b03
   languageName: node
   linkType: hard
 
-"@prisma/engines-version@npm:4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826":
-  version: 4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826
-  resolution: "@prisma/engines-version@npm:4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826"
-  checksum: 65975c69a361b56a85cf3652c8d7aec7549abe574158e423a64bc0be4bee83fe72ac2abd60133f776f3d410f97e7dc8c5dc516791ec963703cc6f914d378efc4
+"@prisma/engines-version@npm:4.4.0-66.f352a33b70356f46311da8b00d83386dd9f145d6":
+  version: 4.4.0-66.f352a33b70356f46311da8b00d83386dd9f145d6
+  resolution: "@prisma/engines-version@npm:4.4.0-66.f352a33b70356f46311da8b00d83386dd9f145d6"
+  checksum: 91ca927a69f53ffd05ee02b25666531997202642dbe92ae2c6df6a28a38726894e3728377c49d2327a323461d92f5b7eedae0795ab6ca50ed59ae28c2775b38a
   languageName: node
   linkType: hard
 
-"@prisma/engines@npm:4.2.1":
-  version: 4.2.1
-  resolution: "@prisma/engines@npm:4.2.1"
-  checksum: 60a13c34412d875f803fbf6452df7dd811b92f9d08e0096629841f404b14e9830ff2e487c8e462d710a1a38a6b0a202e60369d804d0251ae139376772c64f00a
+"@prisma/engines@npm:4.4.0":
+  version: 4.4.0
+  resolution: "@prisma/engines@npm:4.4.0"
+  checksum: e5a62e6c905cbe325f8aa15afe698f8a0a47fe7fdc4d4affdc8df86fcdc6fdd2857ac498611217daf5f8304846a32e199d100165c748b4e8a959bbf0670507a1
   languageName: node
   linkType: hard
 
@@ -1136,6 +1144,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/debug@npm:4":
+  version: 4.1.7
+  resolution: "@types/debug@npm:4.1.7"
+  dependencies:
+    "@types/ms": "*"
+  checksum: 0a7b89d8ed72526858f0b61c6fd81f477853e8c4415bb97f48b1b5545248d2ae389931680b94b393b993a7cfe893537a200647d93defe6d87159b96812305adc
+  languageName: node
+  linkType: hard
+
 "@types/emscripten@npm:^1.39.6":
   version: 1.39.6
   resolution: "@types/emscripten@npm:1.39.6"
@@ -1163,18 +1180,6 @@ __metadata:
     "@types/qs": "*"
     "@types/serve-static": "*"
   checksum: 15c1af46d02de834e4a225eccaa9d85c0370fdbb3ed4e1bc2d323d24872309961542b993ae236335aeb3e278630224a6ea002078d39e651d78a3b0356b1eaa79
-  languageName: node
-  linkType: hard
-
-"@types/express@npm:4.17.13":
-  version: 4.17.13
-  resolution: "@types/express@npm:4.17.13"
-  dependencies:
-    "@types/body-parser": "*"
-    "@types/express-serve-static-core": ^4.17.18
-    "@types/qs": "*"
-    "@types/serve-static": "*"
-  checksum: 12a2a0e6c4b993fc0854bec665906788aea0d8ee4392389d7a98a5de1eefdd33c9e1e40a91f3afd274011119c506f7b4126acb97fae62ae20b654974d44cba12
   languageName: node
   linkType: hard
 
@@ -1261,6 +1266,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/ms@npm:*":
+  version: 0.7.31
+  resolution: "@types/ms@npm:0.7.31"
+  checksum: daadd354aedde024cce6f5aa873fefe7b71b22cd0e28632a69e8b677aeb48ae8caa1c60e5919bb781df040d116b01cb4316335167a3fc0ef6a63fa3614c0f6da
+  languageName: node
+  linkType: hard
+
 "@types/node-fetch@npm:^2.5.10, @types/node-fetch@npm:^2.6.1":
   version: 2.6.2
   resolution: "@types/node-fetch@npm:2.6.2"
@@ -1312,7 +1324,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/passport-http-bearer@npm:^1":
+"@types/passport-http-bearer@npm:1.0.37":
   version: 1.0.37
   resolution: "@types/passport-http-bearer@npm:1.0.37"
   dependencies:
@@ -1413,17 +1425,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/core@npm:^4.0.0-rc.22, @yarnpkg/core@npm:^4.0.0-rc.24":
-  version: 4.0.0-rc.24
-  resolution: "@yarnpkg/core@npm:4.0.0-rc.24"
+"@yarnpkg/core@npm:^4.0.0-rc.25":
+  version: 4.0.0-rc.25
+  resolution: "@yarnpkg/core@npm:4.0.0-rc.25"
   dependencies:
     "@arcanis/slice-ansi": ^1.1.1
     "@types/semver": ^7.1.0
     "@types/treeify": ^1.0.0
-    "@yarnpkg/fslib": ^3.0.0-rc.24
-    "@yarnpkg/libzip": ^3.0.0-rc.24
-    "@yarnpkg/parsers": ^3.0.0-rc.24
-    "@yarnpkg/shell": ^4.0.0-rc.24
+    "@yarnpkg/fslib": ^3.0.0-rc.25
+    "@yarnpkg/libzip": ^3.0.0-rc.25
+    "@yarnpkg/parsers": ^3.0.0-rc.25
+    "@yarnpkg/shell": ^4.0.0-rc.25
     camelcase: ^5.3.1
     chalk: ^3.0.0
     ci-info: ^3.2.0
@@ -1442,73 +1454,73 @@ __metadata:
     treeify: ^1.1.0
     tslib: ^2.4.0
     tunnel: ^0.0.6
-  checksum: 516ff007b09be1fb8772fbb1a032e1b83c894e124cfeaa6dd968654bc11941d3609083ed7ed4b0d5efae2d96d7f8f66a15389336d0d906e8de2efd463d8d4901
+  checksum: 1349885d61f0cdf11314f125b300d74d2fc5af206efa6efb0f9a67cf1825ec2d5d5b4d21de68a65236e0570f384dcc61d984bff5d606fbe90f682bfb017b2a49
   languageName: node
   linkType: hard
 
-"@yarnpkg/fslib@npm:^3.0.0-rc.22, @yarnpkg/fslib@npm:^3.0.0-rc.24":
-  version: 3.0.0-rc.24
-  resolution: "@yarnpkg/fslib@npm:3.0.0-rc.24"
+"@yarnpkg/fslib@npm:^3.0.0-rc.25":
+  version: 3.0.0-rc.25
+  resolution: "@yarnpkg/fslib@npm:3.0.0-rc.25"
   dependencies:
     tslib: ^2.4.0
-  checksum: a75eca2aa23d2f28cf093c1b3bf0b2c90f82b69f32e48d44f1ad8b23cdd0a1325e3bf182dd99be242a006e234a9d66f631aac1347de8c841785fcfce58736470
+  checksum: 5b9ded6b5f35a8bcc65611ee0aaa1b3b45e1e20e45ac65a46176267693ae6d5c9622b2910b8f74d1659e35d68eaeec26393dd766f34a7136c3dbaa4d16cbf4f4
   languageName: node
   linkType: hard
 
-"@yarnpkg/libzip@npm:^3.0.0-rc.24":
-  version: 3.0.0-rc.24
-  resolution: "@yarnpkg/libzip@npm:3.0.0-rc.24"
+"@yarnpkg/libzip@npm:^3.0.0-rc.25":
+  version: 3.0.0-rc.25
+  resolution: "@yarnpkg/libzip@npm:3.0.0-rc.25"
   dependencies:
     "@types/emscripten": ^1.39.6
-    "@yarnpkg/fslib": ^3.0.0-rc.24
+    "@yarnpkg/fslib": ^3.0.0-rc.25
     tslib: ^2.4.0
   peerDependencies:
-    "@yarnpkg/fslib": ^3.0.0-rc.24
-  checksum: 4b68d378fa7245145e8b0a825bce40bd4f54aa6798d152d843a996ec857692fc2e5d0ff0e3f8759190102ef702ae549a3a2cc48f097a3ada6c282cb33243ee1e
+    "@yarnpkg/fslib": ^3.0.0-rc.25
+  checksum: d6a51b8d8ce3d649e5e6b0be488ba2137f5aa9764da8757a0c0c4f3553274585daca3e03d1f1482ba3ab1798ce0540dd0a950940b1f4cdd5cc22518584fb880e
   languageName: node
   linkType: hard
 
-"@yarnpkg/nm@npm:^4.0.0-rc.22":
-  version: 4.0.0-rc.24
-  resolution: "@yarnpkg/nm@npm:4.0.0-rc.24"
+"@yarnpkg/nm@npm:^4.0.0-rc.25":
+  version: 4.0.0-rc.25
+  resolution: "@yarnpkg/nm@npm:4.0.0-rc.25"
   dependencies:
-    "@yarnpkg/core": ^4.0.0-rc.24
-    "@yarnpkg/fslib": ^3.0.0-rc.24
-  checksum: de745fec12246b8411450ff1601cc6bf625a1f751366a112bf62447009fa9a3ef6919ed83eb4c65d8069152b97fbe861d95e46fd574e7bfc97066d4a2d6233ad
+    "@yarnpkg/core": ^4.0.0-rc.25
+    "@yarnpkg/fslib": ^3.0.0-rc.25
+  checksum: 01481af81d43d892bec154dd545e76f8ceaf9514ff6330fda0dd7fced82874ac83b991e60245a48e365245f999d5f449a5b945ec92b387de86499d9439626092
   languageName: node
   linkType: hard
 
-"@yarnpkg/parsers@npm:^3.0.0-rc.24":
-  version: 3.0.0-rc.24
-  resolution: "@yarnpkg/parsers@npm:3.0.0-rc.24"
+"@yarnpkg/parsers@npm:^3.0.0-rc.25":
+  version: 3.0.0-rc.25
+  resolution: "@yarnpkg/parsers@npm:3.0.0-rc.25"
   dependencies:
     js-yaml: ^3.10.0
     tslib: ^2.4.0
-  checksum: 1dd2c6d525ff24bfe1c6d624ddf15d450ec4a870fe0b5907c30845d9ddaeea487528d83b846bf7a511f9ef9c567af21082aafafa3d6fcea4e0a080a8c8b0f6a5
+  checksum: c76ff37072814db2258f0d695db267b3eb3133fec6fe963db831e5288cc8fba2ece3db0732abbe52391da643c2c49522897ae0ccd0136e5cbf14428572d7ec15
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnpify@npm:4.0.0-rc.22":
-  version: 4.0.0-rc.22
-  resolution: "@yarnpkg/pnpify@npm:4.0.0-rc.22"
+"@yarnpkg/pnpify@npm:4.0.0-rc.25":
+  version: 4.0.0-rc.25
+  resolution: "@yarnpkg/pnpify@npm:4.0.0-rc.25"
   dependencies:
-    "@yarnpkg/core": ^4.0.0-rc.22
-    "@yarnpkg/fslib": ^3.0.0-rc.22
-    "@yarnpkg/nm": ^4.0.0-rc.22
+    "@yarnpkg/core": ^4.0.0-rc.25
+    "@yarnpkg/fslib": ^3.0.0-rc.25
+    "@yarnpkg/nm": ^4.0.0-rc.25
     clipanion: ^3.2.0-rc.10
     tslib: ^2.4.0
   bin:
     pnpify: ./lib/cli.js
-  checksum: 2d5b2d8c2caf726f41c375d51e4d64c06febfe712d3a95a16b3cce39e29cb31116ac335d7dc3d81bd7257d9ae0e4762a05f93cd6e890baa9145835db0bef8c82
+  checksum: cd752d43db97535bb5a99ef7058578f0a536a2f1509a135314df4368f640b555b83f7efad2a8646b39505b508262fe4acafef2390b0037858eb6a1369b005b01
   languageName: node
   linkType: hard
 
-"@yarnpkg/shell@npm:^4.0.0-rc.24":
-  version: 4.0.0-rc.24
-  resolution: "@yarnpkg/shell@npm:4.0.0-rc.24"
+"@yarnpkg/shell@npm:^4.0.0-rc.25":
+  version: 4.0.0-rc.25
+  resolution: "@yarnpkg/shell@npm:4.0.0-rc.25"
   dependencies:
-    "@yarnpkg/fslib": ^3.0.0-rc.24
-    "@yarnpkg/parsers": ^3.0.0-rc.24
+    "@yarnpkg/fslib": ^3.0.0-rc.25
+    "@yarnpkg/parsers": ^3.0.0-rc.25
     chalk: ^3.0.0
     clipanion: ^3.2.0-rc.10
     cross-spawn: 7.0.3
@@ -1517,7 +1529,7 @@ __metadata:
     tslib: ^2.4.0
   bin:
     shell: ./lib/cli.js
-  checksum: 899ee8214abfc5debd590404d99ae99334455ead9ef0e472771c071e5d918873a432e07c2b671efb04cdeccb8ba2215aa63cd8dc8db35eee13ea261d075673a8
+  checksum: 7493a037785eadc3aae6d18fe3d15ca746ddf6ed5eedc078f8b4e7b76a41535c3d0ca7c9ab65f7dc83a65c11a35e8b0105137706d4fb2ccef7265521c4c30708
   languageName: node
   linkType: hard
 
@@ -1909,7 +1921,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"apollo-reporting-protobuf@npm:^3.3.1, apollo-reporting-protobuf@npm:^3.3.2, apollo-reporting-protobuf@npm:^3.3.3":
+"apollo-reporting-protobuf@npm:^3.3.1, apollo-reporting-protobuf@npm:^3.3.3":
   version: 3.3.3
   resolution: "apollo-reporting-protobuf@npm:3.3.3"
   dependencies:
@@ -1918,39 +1930,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"apollo-server-core@npm:3.10.2":
-  version: 3.10.2
-  resolution: "apollo-server-core@npm:3.10.2"
-  dependencies:
-    "@apollo/utils.keyvaluecache": ^1.0.1
-    "@apollo/utils.logger": ^1.0.0
-    "@apollo/utils.usagereporting": ^1.0.0
-    "@apollographql/apollo-tools": ^0.5.3
-    "@apollographql/graphql-playground-html": 1.6.29
-    "@graphql-tools/mock": ^8.1.2
-    "@graphql-tools/schema": ^8.0.0
-    "@josephg/resolvable": ^1.0.0
-    apollo-datasource: ^3.3.2
-    apollo-reporting-protobuf: ^3.3.2
-    apollo-server-env: ^4.2.1
-    apollo-server-errors: ^3.3.1
-    apollo-server-plugin-base: ^3.6.2
-    apollo-server-types: ^3.6.2
-    async-retry: ^1.2.1
-    fast-json-stable-stringify: ^2.1.0
-    graphql-tag: ^2.11.0
-    loglevel: ^1.6.8
-    lru-cache: ^6.0.0
-    sha.js: ^2.4.11
-    uuid: ^8.0.0
-    whatwg-mimetype: ^3.0.0
-  peerDependencies:
-    graphql: ^15.3.0 || ^16.0.0
-  checksum: 14b8ac9ef442993b5ef9354d6457cfeeaa1af09c8ece6041bfbf061e7c5d9983f20971ebf6ae2c9b8b8447ad5273943ea548a139ecf06c3559d380ed5c077bcb
-  languageName: node
-  linkType: hard
-
-"apollo-server-core@npm:^3.10.2, apollo-server-core@npm:^3.10.3":
+"apollo-server-core@npm:3.10.3, apollo-server-core@npm:^3.10.3":
   version: 3.10.3
   resolution: "apollo-server-core@npm:3.10.3"
   dependencies:
@@ -2009,7 +1989,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"apollo-server-express@npm:^3.10.2":
+"apollo-server-express@npm:^3.10.3":
   version: 3.10.3
   resolution: "apollo-server-express@npm:3.10.3"
   dependencies:
@@ -2031,33 +2011,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"apollo-server-fastify@npm:3.10.2":
-  version: 3.10.2
-  resolution: "apollo-server-fastify@npm:3.10.2"
+"apollo-server-fastify@npm:3.10.3":
+  version: 3.10.3
+  resolution: "apollo-server-fastify@npm:3.10.3"
   dependencies:
     "@fastify/accepts": ^3.0.0
     "@fastify/cors": ^7.0.0
-    apollo-server-core: ^3.10.2
-    apollo-server-types: ^3.6.2
+    apollo-server-core: ^3.10.3
+    apollo-server-types: ^3.6.3
   peerDependencies:
     fastify: ^3.17.0
     graphql: ^15.3.0 || ^16.0.0
-  checksum: b75f7a194c8a7b2ddc85db72395f319a6959a85dbabffdfe4b11946b8ca65ef2ef9c2b6cb9eaf17ad1ce1a907f0ff96a5df8fe077e126cb80704be59c7449848
+  checksum: 2155bdb52c81de5dade57c53ad4f19c76709b6f6044d82a5a152c384b681260ea0abe1f08faac5c8564284b4c2a9a1b54632f88cebce73c8a0875531a37220cc
   languageName: node
   linkType: hard
 
-"apollo-server-plugin-base@npm:3.6.2":
-  version: 3.6.2
-  resolution: "apollo-server-plugin-base@npm:3.6.2"
-  dependencies:
-    apollo-server-types: ^3.6.2
-  peerDependencies:
-    graphql: ^15.3.0 || ^16.0.0
-  checksum: 8430aa65619d96cd9e15e46b7352bca5abda3f7e4b19d3a289cf337263cdd5bc0d808d2ef110ff76358fea9cf63e62c63d0a8502f1555ee7bb8c784c64b52b6d
-  languageName: node
-  linkType: hard
-
-"apollo-server-plugin-base@npm:^3.6.2, apollo-server-plugin-base@npm:^3.6.3":
+"apollo-server-plugin-base@npm:3.6.3, apollo-server-plugin-base@npm:^3.6.3":
   version: 3.6.3
   resolution: "apollo-server-plugin-base@npm:3.6.3"
   dependencies:
@@ -2068,7 +2037,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"apollo-server-types@npm:^3.6.2, apollo-server-types@npm:^3.6.3":
+"apollo-server-types@npm:^3.6.3":
   version: 3.6.3
   resolution: "apollo-server-types@npm:3.6.3"
   dependencies:
@@ -2082,17 +2051,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"apollo-server@npm:3.10.2":
-  version: 3.10.2
-  resolution: "apollo-server@npm:3.10.2"
+"apollo-server@npm:3.10.3":
+  version: 3.10.3
+  resolution: "apollo-server@npm:3.10.3"
   dependencies:
-    "@types/express": 4.17.13
-    apollo-server-core: ^3.10.2
-    apollo-server-express: ^3.10.2
+    "@types/express": 4.17.14
+    apollo-server-core: ^3.10.3
+    apollo-server-express: ^3.10.3
     express: ^4.17.1
   peerDependencies:
     graphql: ^15.3.0 || ^16.0.0
-  checksum: 9f3c22ed1d4275a8bd5559b276dadab26758c3b4ae90b454d86aeccfa1a0da90d1201f627676e36ec84b8d581f767f24037d682a58615247b393930aca850324
+  checksum: eec2423bbd30256683c0e7873cd1e3f616ff2a3c90cf7bba241880027f5e1374d20d13bf7ce4b09543b16753d0d7a4627f77d64de77b5b241c410f0f246bdbd7
   languageName: node
   linkType: hard
 
@@ -2946,7 +2915,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.3, debug@npm:^4.3.4":
+"debug@npm:4, debug@npm:4.3.4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.3, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
   dependencies:
@@ -3448,6 +3417,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fastify-plugin@npm:4.3.0":
+  version: 4.3.0
+  resolution: "fastify-plugin@npm:4.3.0"
+  checksum: f4831ca6de3db276f6e5c9ae172c175631be07b24b91e1de17d0cd11c1bd29fe7f671deec591a4dfd26169d3de4f9d9ca385d0e7bddccf38c6d21b5764f8b77d
+  languageName: node
+  linkType: hard
+
 "fastify-plugin@npm:^3.0.0":
   version: 3.0.1
   resolution: "fastify-plugin@npm:3.0.1"
@@ -3455,16 +3431,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fastify@npm:4.7.0":
-  version: 4.7.0
-  resolution: "fastify@npm:4.7.0"
+"fastify@npm:4.9.1":
+  version: 4.9.1
+  resolution: "fastify@npm:4.9.1"
   dependencies:
     "@fastify/ajv-compiler": ^3.3.1
     "@fastify/error": ^3.0.0
     "@fastify/fast-json-stringify-compiler": ^4.1.0
     abstract-logging: ^2.0.1
     avvio: ^8.2.0
-    find-my-way: ^7.2.0
+    find-my-way: ^7.3.0
     light-my-request: ^5.6.1
     pino: ^8.5.0
     process-warning: ^2.0.0
@@ -3473,7 +3449,7 @@ __metadata:
     secure-json-parse: ^2.5.0
     semver: ^7.3.7
     tiny-lru: ^9.0.2
-  checksum: 76bc9fb37a36623468d99d9bba2b7166199e663d1f9d0b44b731a6c84c6aa298b6c0d29c6e935c5c0cce18df6d60e48a29dca468f7a155caca05d861a875f80f
+  checksum: 6549aaea9d7184bfa87136ca69986d1417579860f132365973760e8e483fc3d69c6e076f7360ad1851c2842558a459857f0108c546309b1fd061e12d6c85a092
   languageName: node
   linkType: hard
 
@@ -3545,7 +3521,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-my-way@npm:^7.2.0":
+"find-my-way@npm:^7.3.0":
   version: 7.3.1
   resolution: "find-my-way@npm:7.3.1"
   dependencies:
@@ -3960,10 +3936,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:16.5.0":
-  version: 16.5.0
-  resolution: "graphql@npm:16.5.0"
-  checksum: a82a926d085818934d04fdf303a269af170e79de943678bd2726370a96194f9454ade9d6d76c2de69afbd7b9f0b4f8061619baecbbddbe82125860e675ac219e
+"graphql@npm:16.6.0":
+  version: 16.6.0
+  resolution: "graphql@npm:16.6.0"
+  checksum: bf1d9e3c1938ce3c1a81e909bd3ead1ae4707c577f91cff1ca2eca474bfbc7873d5d7b942e1e9777ff5a8304421dba57a4b76d7a29eb19de8711cb70e3c2415e
   languageName: node
   linkType: hard
 
@@ -5012,7 +4988,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^3.0.4, minimatch@npm:^3.1.1":
+"minimatch@npm:^3.0.4, minimatch@npm:^3.1.1, minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
   dependencies:
@@ -5200,35 +5176,37 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "node-backend@workspace:."
   dependencies:
-    "@apollo/server": ^4.0.0-rc.16
-    "@as-integrations/fastify": 0.10.0
+    "@apollo/server": 4.0.0
+    "@as-integrations/fastify": 1.1.0
     "@fastify/cookie": 8.3.0
-    "@luchanso/apollo-fastify": ^0.10.0
-    "@prisma/client": 4.2.1
+    "@luchanso/apollo-fastify": 0.10.0
+    "@prisma/client": 4.4.0
+    "@types/debug": 4
     "@types/invariant": 2.2.35
     "@types/passport-google-oauth20": 2.0.11
-    "@types/passport-http-bearer": ^1
-    "@yarnpkg/pnpify": 4.0.0-rc.22
+    "@types/passport-http-bearer": 1.0.37
+    "@yarnpkg/pnpify": 4.0.0-rc.25
     apollo: 2.34.0
-    apollo-server: 3.10.2
-    apollo-server-core: 3.10.2
+    apollo-server: 3.10.3
+    apollo-server-core: 3.10.3
     apollo-server-errors: 3.3.1
-    apollo-server-fastify: 3.10.2
-    apollo-server-plugin-base: 3.6.2
+    apollo-server-fastify: 3.10.3
+    apollo-server-plugin-base: 3.6.3
     cross-env: 7.0.3
+    debug: 4.3.4
     dotenv: 16.0.3
-    fastify: 4.7.0
-    graphql: 16.5.0
+    fastify: 4.9.1
+    graphql: 16.6.0
     invariant: 2.2.4
     nexus: 1.3.0
-    nodemon: 2.0.19
+    nodemon: 2.0.20
     passport-google-oauth20: 2.0.0
-    passport-http-bearer: ^1.0.1
-    prisma: 4.2.1
-    stripe: 10.13.0
+    passport-http-bearer: 1.0.1
+    prisma: 4.4.0
+    stripe: 10.14.0
     ts-node: ^10.9.1
     ts-node-dev: 2.0.0
-    tslib: ^2.4.0
+    tslib: 2.4.0
     typescript: 4.7.4
   languageName: unknown
   linkType: soft
@@ -5267,14 +5245,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemon@npm:2.0.19":
-  version: 2.0.19
-  resolution: "nodemon@npm:2.0.19"
+"nodemon@npm:2.0.20":
+  version: 2.0.20
+  resolution: "nodemon@npm:2.0.20"
   dependencies:
     chokidar: ^3.5.2
     debug: ^3.2.7
     ignore-by-default: ^1.0.1
-    minimatch: ^3.0.4
+    minimatch: ^3.1.2
     pstree.remy: ^1.1.8
     semver: ^5.7.1
     simple-update-notifier: ^1.0.7
@@ -5283,7 +5261,7 @@ __metadata:
     undefsafe: ^2.0.5
   bin:
     nodemon: bin/nodemon.js
-  checksum: c6cf89435a8945693fac2701285eb1f539b5003d943a1be89a9ffbfc9d0275aa7779f85a9eee509e9f19a988d53ce293266d8b35b91010e36ad9e78683f8eb07
+  checksum: 9fe858682414fe703179f4fe36c86e71f40d2693b5345c09803d7b191816a6589c5df8f1f9873bffee92893880183b95a031c86340e46b364ef1b0b7f619edbf
   languageName: node
   linkType: hard
 
@@ -5583,7 +5561,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"passport-http-bearer@npm:^1.0.1":
+"passport-http-bearer@npm:1.0.1":
   version: 1.0.1
   resolution: "passport-http-bearer@npm:1.0.1"
   dependencies:
@@ -5726,15 +5704,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prisma@npm:4.2.1":
-  version: 4.2.1
-  resolution: "prisma@npm:4.2.1"
+"prisma@npm:4.4.0":
+  version: 4.4.0
+  resolution: "prisma@npm:4.4.0"
   dependencies:
-    "@prisma/engines": 4.2.1
+    "@prisma/engines": 4.4.0
   bin:
     prisma: build/index.js
     prisma2: build/index.js
-  checksum: 7f6fa164e153aa09f28f90420756831bb275a123ee0691fdd70bccee193ccc1d537cd14394cdf2ad549bb8773e06704025664948275d17f0fe4c139a470848e1
+  checksum: fb44f8b36d59c411711b2f5cecbe112a6487c387a7dd7ade350c73c0e9f821dfdb30cd6271c2f2b9b713fda3a31eec4b241c482754b26bfcb6df831ba521a58e
   languageName: node
   linkType: hard
 
@@ -6606,13 +6584,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stripe@npm:10.13.0":
-  version: 10.13.0
-  resolution: "stripe@npm:10.13.0"
+"stripe@npm:10.14.0":
+  version: 10.14.0
+  resolution: "stripe@npm:10.14.0"
   dependencies:
     "@types/node": ">=8.1.0"
     qs: ^6.11.0
-  checksum: 217df59a86eab02097fe54a24967687bdf0f11be6f3a918037db28abe8014433acda12e21f477f92717da9f0183baa034f5b923c56369e14da8988a00d598380
+  checksum: 749fa60007f83877fa8b31fef0dae95fb267f02cb0dc5fcd216f5d376fa114d69da2b33a14212070f15c49f1c349b5c9b0e7510a42a077c288727ea903526b98
   languageName: node
   linkType: hard
 
@@ -6888,17 +6866,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:2.4.0, tslib@npm:^2, tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "tslib@npm:2.4.0"
+  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^1.10.0, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2, tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "tslib@npm:2.4.0"
-  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
   languageName: node
   linkType: hard
 
@@ -7099,15 +7077,6 @@ __metadata:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: c81095493225ecfc28add49c106ca4f09cdf56bc66731aa8dabc2edbbccb1e1bfe2de6a115e5c6a380d3ea166d1636410b62ef216bb07b3feb1cfde1d95d5080
-  languageName: node
-  linkType: hard
-
-"uuid@npm:^8.0.0":
-  version: 8.3.2
-  resolution: "uuid@npm:8.3.2"
-  bin:
-    uuid: dist/bin/uuid
-  checksum: 5575a8a75c13120e2f10e6ddc801b2c7ed7d8f3c8ac22c7ed0c7b2ba6383ec0abda88c905085d630e251719e0777045ae3236f04c812184b7c765f63a70e58df
   languageName: node
   linkType: hard
 

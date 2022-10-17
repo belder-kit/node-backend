@@ -1,7 +1,9 @@
 import { fastifyApolloDrainPlugin } from "@luchanso/apollo-fastify";
 import { ApolloServerPlugin, BaseContext } from "@apollo/server";
 import { ApolloServerPluginLandingPageLocalDefault } from "@apollo/server/plugin/landingPage/default";
-import { FastifyInstance } from "fastify";
+import Fastify from "fastify";
+
+type FastifyInstance = ReturnType<typeof Fastify>;
 
 const plugins: ApolloServerPlugin<BaseContext>[] = [
   {

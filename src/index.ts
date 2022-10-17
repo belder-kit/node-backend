@@ -1,12 +1,16 @@
 import "dotenv/config";
 import fastifyCookie from "@fastify/cookie";
-import Fastify, { FastifyInstance } from "fastify";
+import Fastify from "fastify";
 import { ApolloServer } from "@apollo/server";
 import invariant from "invariant";
 import { DataSources, dataSources } from "./datasources";
 import { createPlugins } from "./plugins";
 import { schema } from "./schema";
 import fastifyApollo from "@luchanso/apollo-fastify";
+import { Logger } from "./plugins/logger";
+import debug from "debug";
+
+const log = debug("application");
 
 const PORT = Number(process.env.PORT) || 80;
 
@@ -27,7 +31,7 @@ const PORT = Number(process.env.PORT) || 80;
 async function startApolloServer() {
   const fastify = Fastify({
     forceCloseConnections: true,
-    logger: true,
+    logger: process.env.NODE_ENV !== "production" && new Logger(),
   });
 
   const apollo = new ApolloServer<DataSources>({
@@ -48,7 +52,7 @@ async function startApolloServer() {
     port: PORT,
   });
 
-  console.log(`🚀 Server ready at http://localhost:${PORT}/graphql`);
+  log(`🚀 Server ready at http://localhost:${PORT}/graphql`);
 }
 
 startApolloServer();
