@@ -1,5 +1,5 @@
-import fastifyCookie from "@fastify/cookie";
 import "dotenv/config";
+import fastifyCookie from "@fastify/cookie";
 import Fastify, { FastifyInstance } from "fastify";
 import { ApolloServer } from "@apollo/server";
 import invariant from "invariant";

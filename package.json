@@ -11,7 +11,7 @@
     "dev:db": "docker compose -f ./docker-compose-db.yml up",
     "dev:nexus": "nodemon -e ts --watch src --exec \"yarn nexus:generate\"",
     "start": "nodemon -e ts,d.ts --watch src --exec \"yarn nexus:generate && yarn build && yarn dev:app\"",
-    "build": "cp -r src/generated/prisma build/generated && tsc",
+    "build": "mkdir -p build/generated && cp -r src/generated/prisma build/generated && tsc",
     "prisma:studio": "yarn prisma studio",
     "prisma:generate": "yarn pnpify prisma generate",
     "prisma:push": "yarn pnpify prisma db push",
@@ -21,7 +21,6 @@
     "nexus:generate": "yarn ts-node-dev --project tsconfig.json --transpile-only --no-notify ./src/schema/index.ts",
     "docker:build": "docker build . -t localhost:5000/project/node-backend",
     "docker:start": "PROJECT_NAME=project docker-compose up -d",
-    "postinstall": "mkdir -p build && mkdir -p build/generated",
     "prod:start": "node build/index",
     "prod:migrate": "yarn pnpify prisma migrate deploy"
   },

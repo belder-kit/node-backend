@@ -1,3 +1,5 @@
+// Duplication dotenv for generation
+import "dotenv/config";
 import { makeSchema } from "nexus";
 import { resolve } from "path";
 import * as types from "./types";
