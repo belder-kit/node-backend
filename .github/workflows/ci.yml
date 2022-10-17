@@ -25,4 +25,4 @@ jobs:
         run: yarn install --immutable
 
       - name: Build page
-        run: yarn build
+        run: yarn generate && yarn build
