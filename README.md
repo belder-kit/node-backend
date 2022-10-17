@@ -9,7 +9,6 @@
 
 ```
 #  first install
-cat .env.example > .env
 yarn install
 yarn generate
 yarn dev:db # run local database
