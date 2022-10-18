@@ -49,6 +49,7 @@ async function startApolloServer() {
   // fastifyConfig(fastify);
 
   await fastify.listen({
+    host: "0.0.0.0",
     port: PORT,
   });
 

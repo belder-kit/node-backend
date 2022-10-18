@@ -1,16 +1,16 @@
 version: "3.9"
 services:
   backend:
-    container_name: node-backend
-    image: localhost:5000/${PROJECT_NAME}/node-backend
+    container_name: ${APP_NAME}
+    image: localhost:5000/${PROJECT_NAME}/${APP_NAME}
     env_file:
       - .env
     depends_on:
-      - db
+      - backend-database
     deploy:
       restart_policy:
         condition: on-failure
-        delay: 5s
+        delay: 30s
       resources:
         limits:
           memory: 512M
@@ -18,8 +18,8 @@ services:
           memory: 512M
     networks:
       - app
-  db:
-    container_name: node-backend-database
+  backend-database:
+    container_name: backend-database
     image: postgres:15.0-alpine
     ports:
       # throw database ports only for local access via ssh

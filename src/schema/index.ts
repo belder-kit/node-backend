@@ -12,6 +12,8 @@ export const schema = makeSchema({
     Query,
     Mutation,
   },
+  shouldGenerateArtifacts: !!process.env.GENERATE_NEXUS_TYPES,
+  shouldExitAfterGenerateArtifacts: !!process.env.GENERATE_NEXUS_TYPES,
   sourceTypes: {
     modules: [
       {
@@ -20,12 +22,10 @@ export const schema = makeSchema({
       },
     ],
   },
-  outputs: process.env.SKIP_GENERATE_NEXUS
-    ? undefined
-    : {
-        schema: resolve("./src/generated/graphql/index.graphql"),
-        typegen: resolve("./src/generated/nexus/index.ts"),
-      },
+  outputs: {
+    schema: resolve("./src/generated/graphql/index.graphql"),
+    typegen: resolve("./src/generated/nexus/index.ts"),
+  },
   contextType: {
     module: resolve("./src/datasources/index.ts"),
     export: "DataSources",

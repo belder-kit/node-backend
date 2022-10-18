@@ -11,17 +11,25 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set insecure registry
+        run: |
+          echo "{ \"insecure-registries\": [\"${{ secrets.HOST }}:5000\"] }" | sudo tee /etc/docker/daemon.json
+          sudo service docker restart
+
+      - uses: docker/setup-buildx-action@v2
+        with:
+          config-inline: |
+            debug = true
+            [registry."${{ secrets.HOST }}:5000"]
+            http = true
+            insecure = true
+
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           name: id_ed25519
           known_hosts: ${{ secrets.KNOW_HOSTS }}
-
-      - name: Set insecure registry
-        run: |
-          echo "{ \"insecure-registries\": [\"${{ secrets.HOST }}:5000\"] }" | sudo tee /etc/docker/daemon.json
-          sudo service docker restart
 
       - name: Login to Docker Registry
         uses: docker/login-action@v2
@@ -33,22 +41,28 @@ jobs:
       - name: Create .env file
         run: |
           echo STRIPE=${{ secrets.STRIPE }} >> .env
-          echo STRIPE_CALLBACK_HOST=${{ secrets.STRIPE_CALLBACK_HOST }}
+          echo STRIPE_CALLBACK_HOST=${{ secrets.STRIPE_CALLBACK_HOST }} >> .env
           echo DATABASE_URL=${{ secrets.DATABASE_URL }} >> .env
           echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
           echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
           echo POSTGRES_DB=${{ secrets.POSTGRES_DB }} >> .env
           echo NODE_ENV=production >> .env
-          echo SKIP_GENERATE_NEXUS=1 >> .env
+          echo PROJECT_NAME=${{ secrets.PROJECT_NAME }} >> .env
+          echo APP_NAME=${{ secrets.APP_NAME }} >> .env
 
-      - name: Build docker image
-        run: docker build -t ${{ secrets.HOST }}:5000/${{secrets.PROJECT_NAME}}/${{ secrets.APP_NAME }} .
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.HOST }}:5000/${{secrets.PROJECT_NAME}}/${{ secrets.APP_NAME }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
-      - name: Push image
-        run: docker push ${{ secrets.HOST }}:5000/${{secrets.PROJECT_NAME}}/${{ secrets.APP_NAME }}
-
-      - name: Copy docker-compose file to remote
-        run: scp ./docker-compose.yml ${{ secrets.USERNAME }}@${{ secrets.HOST }}:~/${{ secrets.APP_NAME }}/
+      - name: Copy docker-compose file and env to remote
+        run: |
+          rsync -chavzP --stats ./docker-compose.yml ${{ secrets.USERNAME }}@${{ secrets.HOST }}:~/${{ secrets.APP_NAME }}/
+          rsync -chavzP --stats ./.env ${{ secrets.USERNAME }}@${{ secrets.HOST }}:~/${{ secrets.APP_NAME }}/
 
       - name: Restart application
-        run: ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'cd ${{secrets.APP_NAME}} && docker-compose pull && PROJECT_NAME=${{secrets.PROJECT_NAME}} docker-compose up -d'
+        run: ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'cd ${{secrets.APP_NAME}} && docker-compose pull && docker-compose up -d'
