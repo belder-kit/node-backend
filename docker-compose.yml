@@ -35,6 +35,7 @@ services:
         reservations:
           memory: 256M
   minio:
+    container_name: backend-minio
     image: minio/minio:latest
     ports:
       - 127.0.0.1:9001:9001
