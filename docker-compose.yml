@@ -34,6 +34,24 @@ services:
           memory: 256M
         reservations:
           memory: 256M
+  minio:
+    image: minio/minio:latest
+    ports:
+      - 127.0.0.1:9001:9001
+    environment:
+      MINIO_ROOT_USER: ${MINIO_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_PASSWORD}
+    volumes:
+      - ./minio-data:/data
+    command: server /data --console-address ":9001"
+    networks:
+      - app
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+        reservations:
+          memory: 128M
 networks:
   app:
     name: app

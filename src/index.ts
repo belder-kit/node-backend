@@ -1,33 +1,17 @@
 import "dotenv/config";
-import fastifyCookie from "@fastify/cookie";
 import Fastify from "fastify";
 import { ApolloServer } from "@apollo/server";
-import invariant from "invariant";
 import { DataSources, dataSources } from "./datasources";
 import { createPlugins } from "./plugins";
 import { schema } from "./schema";
 import fastifyApollo from "@luchanso/apollo-fastify";
 import { Logger } from "./plugins/logger";
 import debug from "debug";
+import { uploadImages } from "./plugins/uploadImages";
 
 const log = debug("application");
 
 const PORT = Number(process.env.PORT) || 80;
-
-// function fastifyConfig(fastify: FastifyInstance) {
-//   invariant(
-//     process.env.SESSION_SECRET,
-//     `Setup SESSION_SECRET for cookie (more 32 symbols)`
-//   );
-
-//   fastify.register(fastifyCookie, {
-//     parseOptions: {
-//       httpOnly: true,
-//     },
-//     secret: process.env.SESSION_SECRET,
-//   });
-// }
-
 async function startApolloServer() {
   const fastify = Fastify({
     forceCloseConnections: true,
@@ -45,8 +29,13 @@ async function startApolloServer() {
   fastify.register(fastifyApollo(apollo), {
     context: dataSources,
   });
-
-  // fastifyConfig(fastify);
+  fastify.addContentTypeParser(
+    "multipart/form-data",
+    function (request, payload, done) {
+      done(null);
+    }
+  );
+  fastify.post("/uploadImages", uploadImages);
 
   await fastify.listen({
     host: "0.0.0.0",

@@ -18,6 +18,10 @@ model Subscriber {
   createdAt DateTime @default(now())
 }
 
+model Images {
+  id String @id @unique @default(cuid())
+}
+
 model Product {
   id          String   @id @unique @default(cuid())
   name        String
