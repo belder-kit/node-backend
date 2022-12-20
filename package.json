@@ -33,7 +33,7 @@
     "@as-integrations/fastify": "1.1.0",
     "@luchanso/apollo-fastify": "0.10.0",
     "@prisma/client": "4.4.0",
-    "@yarnpkg/pnpify": "4.0.0-rc.25",
+    "@yarnpkg/pnpify": "4.0.0-rc.34",
     "apollo": "2.34.0",
     "apollo-server": "3.10.3",
     "apollo-server-core": "3.10.3",
@@ -69,5 +69,5 @@
     "prisma": "4.4.0",
     "ts-node": "10.9.1"
   },
-  "packageManager": "yarn@3.2.4"
+  "packageManager": "yarn@3.3.1"
 }

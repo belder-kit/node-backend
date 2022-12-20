@@ -430,16 +430,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fastify/cookie@npm:8.3.0":
-  version: 8.3.0
-  resolution: "@fastify/cookie@npm:8.3.0"
-  dependencies:
-    cookie: ^0.5.0
-    fastify-plugin: ^4.0.0
-  checksum: d5dfb5c85d4ae02188aad63c8cf055d3b904287bc2750964ee0b8589c5b5ae32850e8fc9456a8830e9f4e9f24d5059e54dac084835d6ef4cbba7fa4b9c4673b3
-  languageName: node
-  linkType: hard
-
 "@fastify/cors@npm:^7.0.0":
   version: 7.0.0
   resolution: "@fastify/cors@npm:7.0.0"
@@ -1201,18 +1191,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/graphql-upload@npm:^8.0.12":
-  version: 8.0.12
-  resolution: "@types/graphql-upload@npm:8.0.12"
-  dependencies:
-    "@types/express": "*"
-    "@types/koa": "*"
-    fs-capacitor: ^8.0.0
-    graphql: 0.13.1 - 16
-  checksum: 394d5e05f4d5a205dc53f66670af28de73bc73b0910e68907e6d01348caeeb27478621cfdb238a71668f0cca7347ed362c2f1a68266da4b823707dc4daba92ee
-  languageName: node
-  linkType: hard
-
 "@types/http-assert@npm:*":
   version: 1.5.3
   resolution: "@types/http-assert@npm:1.5.3"
@@ -1333,6 +1311,13 @@ __metadata:
   version: 10.17.60
   resolution: "@types/node@npm:10.17.60"
   checksum: 2cdb3a77d071ba8513e5e8306fa64bf50e3c3302390feeaeff1fd325dd25c8441369715dfc8e3701011a72fed5958c7dfa94eb9239a81b3c286caa4d97db6eef
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.11.11":
+  version: 18.11.17
+  resolution: "@types/node@npm:18.11.17"
+  checksum: 1933afd068d5c75c068c6c4df6d10edb3b0b2bb6503d544e2f0496ac007c90596e6a5e284a8ef032451bc16f871b7e46719d7d2bea60e9b25d13a77d52161cac
   languageName: node
   linkType: hard
 
@@ -1459,17 +1444,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/core@npm:^4.0.0-rc.25":
-  version: 4.0.0-rc.25
-  resolution: "@yarnpkg/core@npm:4.0.0-rc.25"
+"@yarnpkg/core@npm:^4.0.0-rc.34":
+  version: 4.0.0-rc.34
+  resolution: "@yarnpkg/core@npm:4.0.0-rc.34"
   dependencies:
     "@arcanis/slice-ansi": ^1.1.1
     "@types/semver": ^7.1.0
     "@types/treeify": ^1.0.0
-    "@yarnpkg/fslib": ^3.0.0-rc.25
-    "@yarnpkg/libzip": ^3.0.0-rc.25
-    "@yarnpkg/parsers": ^3.0.0-rc.25
-    "@yarnpkg/shell": ^4.0.0-rc.25
+    "@yarnpkg/fslib": ^3.0.0-rc.34
+    "@yarnpkg/libzip": ^3.0.0-rc.34
+    "@yarnpkg/parsers": ^3.0.0-rc.34
+    "@yarnpkg/shell": ^4.0.0-rc.34
     camelcase: ^5.3.1
     chalk: ^3.0.0
     ci-info: ^3.2.0
@@ -1488,73 +1473,84 @@ __metadata:
     treeify: ^1.1.0
     tslib: ^2.4.0
     tunnel: ^0.0.6
-  checksum: 1349885d61f0cdf11314f125b300d74d2fc5af206efa6efb0f9a67cf1825ec2d5d5b4d21de68a65236e0570f384dcc61d984bff5d606fbe90f682bfb017b2a49
+  checksum: bbbfbd26568c94a737586f33f43a04a5436e506bbbaf776ae44d6f342070801f8aff6a1ce8e5e97a6b37eb17b14d701daacdd28e2ac1538f6a98c175aa121a29
   languageName: node
   linkType: hard
 
-"@yarnpkg/fslib@npm:^3.0.0-rc.25":
-  version: 3.0.0-rc.25
-  resolution: "@yarnpkg/fslib@npm:3.0.0-rc.25"
+"@yarnpkg/fslib@npm:^3.0.0-rc.34":
+  version: 3.0.0-rc.34
+  resolution: "@yarnpkg/fslib@npm:3.0.0-rc.34"
   dependencies:
     tslib: ^2.4.0
-  checksum: 5b9ded6b5f35a8bcc65611ee0aaa1b3b45e1e20e45ac65a46176267693ae6d5c9622b2910b8f74d1659e35d68eaeec26393dd766f34a7136c3dbaa4d16cbf4f4
+  checksum: d9cc6ae171f12b83b396469106ac051e37101f4823b9989ad4f9a4e459834f3ff36eca1938df51a03f560ea6e5811dd16523110767b520a74c607d922cfbe662
   languageName: node
   linkType: hard
 
-"@yarnpkg/libzip@npm:^3.0.0-rc.25":
-  version: 3.0.0-rc.25
-  resolution: "@yarnpkg/libzip@npm:3.0.0-rc.25"
+"@yarnpkg/libzip@npm:^3.0.0-rc.34":
+  version: 3.0.0-rc.34
+  resolution: "@yarnpkg/libzip@npm:3.0.0-rc.34"
   dependencies:
     "@types/emscripten": ^1.39.6
-    "@yarnpkg/fslib": ^3.0.0-rc.25
+    "@yarnpkg/fslib": ^3.0.0-rc.34
     tslib: ^2.4.0
   peerDependencies:
-    "@yarnpkg/fslib": ^3.0.0-rc.25
-  checksum: d6a51b8d8ce3d649e5e6b0be488ba2137f5aa9764da8757a0c0c4f3553274585daca3e03d1f1482ba3ab1798ce0540dd0a950940b1f4cdd5cc22518584fb880e
+    "@yarnpkg/fslib": ^3.0.0-rc.34
+  checksum: 2afaf7762945312908a56ec14567283844082edea4286ff7e61567ae150891ad84cfa132aed74d010b933e8170f42e2c1d1a460fe84a6d85c15ecfdf84cf47fe
   languageName: node
   linkType: hard
 
-"@yarnpkg/nm@npm:^4.0.0-rc.25":
-  version: 4.0.0-rc.25
-  resolution: "@yarnpkg/nm@npm:4.0.0-rc.25"
+"@yarnpkg/nm@npm:^4.0.0-rc.34":
+  version: 4.0.0-rc.34
+  resolution: "@yarnpkg/nm@npm:4.0.0-rc.34"
   dependencies:
-    "@yarnpkg/core": ^4.0.0-rc.25
-    "@yarnpkg/fslib": ^3.0.0-rc.25
-  checksum: 01481af81d43d892bec154dd545e76f8ceaf9514ff6330fda0dd7fced82874ac83b991e60245a48e365245f999d5f449a5b945ec92b387de86499d9439626092
+    "@yarnpkg/core": ^4.0.0-rc.34
+    "@yarnpkg/fslib": ^3.0.0-rc.34
+    "@yarnpkg/pnp": ^4.0.0-rc.34
+  checksum: 6058aa1bc1798cf30a95486e0c7c0cfd9f5744bc9c7bcdc9ef6082c5ca6287d8cb6bfc4dd104f2bde3357b9d28a7b66a956e4780a20183f75632d4143c170a61
   languageName: node
   linkType: hard
 
-"@yarnpkg/parsers@npm:^3.0.0-rc.25":
-  version: 3.0.0-rc.25
-  resolution: "@yarnpkg/parsers@npm:3.0.0-rc.25"
+"@yarnpkg/parsers@npm:^3.0.0-rc.34":
+  version: 3.0.0-rc.34
+  resolution: "@yarnpkg/parsers@npm:3.0.0-rc.34"
   dependencies:
     js-yaml: ^3.10.0
     tslib: ^2.4.0
-  checksum: c76ff37072814db2258f0d695db267b3eb3133fec6fe963db831e5288cc8fba2ece3db0732abbe52391da643c2c49522897ae0ccd0136e5cbf14428572d7ec15
+  checksum: 58720f03e4fc45a5468f799de53cdd114eef9be9947c76dbc1354a57b2443c139a8f3db6f92a87b78bf0b11fd66782eae2ffb9b0ecb8455d2c105dc4ccf6effb
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnpify@npm:4.0.0-rc.25":
-  version: 4.0.0-rc.25
-  resolution: "@yarnpkg/pnpify@npm:4.0.0-rc.25"
+"@yarnpkg/pnp@npm:^4.0.0-rc.34":
+  version: 4.0.0-rc.34
+  resolution: "@yarnpkg/pnp@npm:4.0.0-rc.34"
   dependencies:
-    "@yarnpkg/core": ^4.0.0-rc.25
-    "@yarnpkg/fslib": ^3.0.0-rc.25
-    "@yarnpkg/nm": ^4.0.0-rc.25
+    "@types/node": ^18.11.11
+    "@yarnpkg/fslib": ^3.0.0-rc.34
+  checksum: c3497f8cf04950c6795a45d4e31c4db25f4258e88ee94ce2ccbb2de143884afd20b50651862008512b6c4dbd527acf17878c00302818de4ec304b51d94cdd313
+  languageName: node
+  linkType: hard
+
+"@yarnpkg/pnpify@npm:4.0.0-rc.34":
+  version: 4.0.0-rc.34
+  resolution: "@yarnpkg/pnpify@npm:4.0.0-rc.34"
+  dependencies:
+    "@yarnpkg/core": ^4.0.0-rc.34
+    "@yarnpkg/fslib": ^3.0.0-rc.34
+    "@yarnpkg/nm": ^4.0.0-rc.34
     clipanion: ^3.2.0-rc.10
     tslib: ^2.4.0
   bin:
     pnpify: ./lib/cli.js
-  checksum: cd752d43db97535bb5a99ef7058578f0a536a2f1509a135314df4368f640b555b83f7efad2a8646b39505b508262fe4acafef2390b0037858eb6a1369b005b01
+  checksum: f85a345103a5c17065d664bf26c0a329b208985ac190e40d6bfe8ea9773be92c91ac7299ba167ed6f0b14aeabb5dca5e31b8032d9e754eee2415b0b3dfad7590
   languageName: node
   linkType: hard
 
-"@yarnpkg/shell@npm:^4.0.0-rc.25":
-  version: 4.0.0-rc.25
-  resolution: "@yarnpkg/shell@npm:4.0.0-rc.25"
+"@yarnpkg/shell@npm:^4.0.0-rc.34":
+  version: 4.0.0-rc.34
+  resolution: "@yarnpkg/shell@npm:4.0.0-rc.34"
   dependencies:
-    "@yarnpkg/fslib": ^3.0.0-rc.25
-    "@yarnpkg/parsers": ^3.0.0-rc.25
+    "@yarnpkg/fslib": ^3.0.0-rc.34
+    "@yarnpkg/parsers": ^3.0.0-rc.34
     chalk: ^3.0.0
     clipanion: ^3.2.0-rc.10
     cross-spawn: 7.0.3
@@ -1563,7 +1559,7 @@ __metadata:
     tslib: ^2.4.0
   bin:
     shell: ./lib/cli.js
-  checksum: 7493a037785eadc3aae6d18fe3d15ca746ddf6ed5eedc078f8b4e7b76a41535c3d0ca7c9ab65f7dc83a65c11a35e8b0105137706d4fb2ccef7265521c4c30708
+  checksum: e94710242d41b2eaca37c8306035bbfc8a968de874263ae32124d4bc2e2458c4ce902613a1cb26e4bcf12a9d735929b4166dc902c9a003d67b062783e7e11443
   languageName: node
   linkType: hard
 
@@ -2067,7 +2063,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"apollo-server-plugin-base@npm:3.6.3, apollo-server-plugin-base@npm:^3.6.3":
+"apollo-server-plugin-base@npm:^3.6.3":
   version: 3.6.3
   resolution: "apollo-server-plugin-base@npm:3.6.3"
   dependencies:
@@ -3785,7 +3781,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fastify-plugin@npm:4.2.1, fastify-plugin@npm:^4.0.0":
+"fastify-plugin@npm:4.2.1":
   version: 4.2.1
   resolution: "fastify-plugin@npm:4.2.1"
   checksum: 01eaa6644f21a50c0a83a8ac0dceea8f2d35bafd233788a10a7b60803bb0b27068677b718e05ce14f4e97778f0966389eedbbb16b4f3886d7fbbb6125788d681
@@ -3948,13 +3944,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-capacitor@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "fs-capacitor@npm:8.0.0"
-  checksum: 531c8c4ac12fe3a75f9564cb3ce41571f148ec81cf111fed04f6921a5a2de1eadacf44497c223dd281243472fe6ccc98005f34674e8e471d6370b7437860f774
-  languageName: node
-  linkType: hard
-
 "fs-constants@npm:^1.0.0":
   version: 1.0.0
   resolution: "fs-constants@npm:1.0.0"
@@ -4013,7 +4002,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -4325,17 +4314,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:0.13.1 - 16, graphql@npm:16.6.0":
-  version: 16.6.0
-  resolution: "graphql@npm:16.6.0"
-  checksum: bf1d9e3c1938ce3c1a81e909bd3ead1ae4707c577f91cff1ca2eca474bfbc7873d5d7b942e1e9777ff5a8304421dba57a4b76d7a29eb19de8711cb70e3c2415e
-  languageName: node
-  linkType: hard
-
 "graphql@npm:14.0.2 - 14.2.0 || ^14.3.1 || ^15.0.0":
   version: 15.8.0
   resolution: "graphql@npm:15.8.0"
   checksum: 423325271db8858428641b9aca01699283d1fe5b40ef6d4ac622569ecca927019fce8196208b91dd1d8eb8114f00263fe661d241d0eb40c10e5bfd650f86ec5e
+  languageName: node
+  linkType: hard
+
+"graphql@npm:16.6.0":
+  version: 16.6.0
+  resolution: "graphql@npm:16.6.0"
+  checksum: bf1d9e3c1938ce3c1a81e909bd3ead1ae4707c577f91cff1ca2eca474bfbc7873d5d7b942e1e9777ff5a8304421dba57a4b76d7a29eb19de8711cb70e3c2415e
   languageName: node
   linkType: hard
 
@@ -5771,25 +5760,22 @@ __metadata:
   dependencies:
     "@apollo/server": 4.0.0
     "@as-integrations/fastify": 1.1.0
-    "@fastify/cookie": 8.3.0
     "@luchanso/apollo-fastify": 0.10.0
     "@prisma/client": 4.4.0
     "@types/busboy": ^1
     "@types/cuid": ^2
     "@types/debug": 4.1.7
-    "@types/graphql-upload": ^8.0.12
     "@types/invariant": 2.2.35
     "@types/minio": ^7
     "@types/passport-google-oauth20": 2.0.11
     "@types/passport-http-bearer": 1.0.37
     "@types/sharp": ^0
-    "@yarnpkg/pnpify": 4.0.0-rc.25
+    "@yarnpkg/pnpify": 4.0.0-rc.34
     apollo: 2.34.0
     apollo-server: 3.10.3
     apollo-server-core: 3.10.3
     apollo-server-errors: 3.3.1
     apollo-server-fastify: 3.10.3
-    apollo-server-plugin-base: 3.6.3
     busboy: 1.6.0
     cross-env: 7.0.3
     cuid: ^2.1.8
@@ -6680,7 +6666,7 @@ __metadata:
 
 "resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>":
   version: 1.22.1
-  resolution: "resolve@patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=07638b"
+  resolution: "resolve@patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=c3c19d"
   dependencies:
     is-core-module: ^2.9.0
     path-parse: ^1.0.7
@@ -7712,7 +7698,7 @@ __metadata:
 
 "typescript@patch:typescript@4.7.4#~builtin<compat/typescript>":
   version: 4.7.4
-  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=701156"
+  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=65a307"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
