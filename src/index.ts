@@ -7,7 +7,7 @@ import { schema } from "./schema";
 import fastifyApollo from "@luchanso/apollo-fastify";
 import { Logger } from "./plugins/logger";
 import debug from "debug";
-import { uploadImages } from "./plugins/uploadImages";
+// import { uploadImages } from "./plugins/uploadImages";
 
 const log = debug("application");
 
@@ -35,7 +35,7 @@ async function startApolloServer() {
       done(null);
     }
   );
-  fastify.post("/uploadImages", uploadImages);
+  // fastify.post("/uploadImages", uploadImages);
 
   await fastify.listen({
     host: "0.0.0.0",

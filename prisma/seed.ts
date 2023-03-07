@@ -1,27 +1,13 @@
-import { PrismaClient } from "../src/generated/prisma";
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
 async function main() {
   await prisma.user.create({
-    data: {
-      permisions: "FullAccess",
-      tokens: {
-        create: {
-          id: "admin-token",
-        },
-      },
-    },
+    data: {},
   });
   await prisma.user.create({
-    data: {
-      permisions: "User",
-      tokens: {
-        create: {
-          id: "user-token",
-        },
-      },
-    },
+    data: {},
   });
 }
 

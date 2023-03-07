@@ -36,7 +36,16 @@ jobs:
         with:
           registry: ${{ secrets.HOST }}:5000
           username: ${{ secrets.REGISTRY_USERNAME }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.HOST }}:5000/${{secrets.PROJECT_NAME}}/${{ secrets.APP_NAME }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
       - name: Create .env file
         run: |
@@ -53,15 +62,6 @@ jobs:
           echo NODE_ENV=production >> .env
           echo PROJECT_NAME=${{ secrets.PROJECT_NAME }} >> .env
           echo APP_NAME=${{ secrets.APP_NAME }} >> .env
-
-      - name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: ${{ secrets.HOST }}:5000/${{secrets.PROJECT_NAME}}/${{ secrets.APP_NAME }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
 
       - name: Copy docker-compose file and env to remote
         run: |

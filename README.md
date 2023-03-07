@@ -13,7 +13,7 @@ yarn install
 yarn setup-env
 yarn generate
 yarn dev:db # run local database
-yarn prod:migrate # initialize database
+yarn prisma:push # initialize database
 
 #  development
 yarn dev:db # run local database

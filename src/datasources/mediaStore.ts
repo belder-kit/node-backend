@@ -50,12 +50,12 @@ invariant(
   "MINIO_PASSWORD must be string"
 );
 
-export const mediaStore = new MediaStore({
-  endPoint: process.env.MINIO_URL,
-  port: Number(process.env.MINIO_PORT),
-  useSSL: false,
-  accessKey: process.env.MINIO_USER,
-  secretKey: process.env.MINIO_PASSWORD,
-});
+// export const mediaStore = new MediaStore({
+//   endPoint: process.env.MINIO_URL,
+//   port: Number(process.env.MINIO_PORT),
+//   useSSL: false,
+//   accessKey: process.env.MINIO_USER,
+//   secretKey: process.env.MINIO_PASSWORD,
+// });
 
-mediaStore.init();
+// mediaStore.init();
