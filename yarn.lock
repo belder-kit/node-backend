@@ -290,15 +290,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@as-integrations/fastify@npm:1.1.0":
-  version: 1.1.0
-  resolution: "@as-integrations/fastify@npm:1.1.0"
+"@as-integrations/fastify@npm:1.3.2":
+  version: 1.3.2
+  resolution: "@as-integrations/fastify@npm:1.3.2"
   dependencies:
-    fastify-plugin: 4.3.0
+    fastify-plugin: ^4.4.0
   peerDependencies:
     "@apollo/server": ^4.0.0
     fastify: ^4.4.0
-  checksum: cff74aadc8e25b28eb826cacb285232a359fb325f4e72670c36901ea7f1ca4693a405aea4e6d1a9a743d0c42c048781030cf5294f44023bfbea2bd8ffd5425f6
+  checksum: ec467a1a3bcde347fb4b53a47d8ed5f71bd7e4201345041dee5fa93acf02843d368e2baa26e507b5e2768af06cbfa9754bcf1a0037f6c0df594c96c2e57889ec
   languageName: node
   linkType: hard
 
@@ -4506,17 +4506,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fastify-plugin@npm:4.3.0":
-  version: 4.3.0
-  resolution: "fastify-plugin@npm:4.3.0"
-  checksum: f4831ca6de3db276f6e5c9ae172c175631be07b24b91e1de17d0cd11c1bd29fe7f671deec591a4dfd26169d3de4f9d9ca385d0e7bddccf38c6d21b5764f8b77d
-  languageName: node
-  linkType: hard
-
 "fastify-plugin@npm:^3.0.0":
   version: 3.0.1
   resolution: "fastify-plugin@npm:3.0.1"
   checksum: 131ba0a388f777829c3fb0fd5b75cf057688ce6d0ca354fb1ebf829767a8c853b0825762b9185b5200097454df0ede2f3095da2efe1aa1b3736d07f194e6d374
+  languageName: node
+  linkType: hard
+
+"fastify-plugin@npm:^4.4.0":
+  version: 4.5.0
+  resolution: "fastify-plugin@npm:4.5.0"
+  checksum: 3cc36a43ec72ee9974d3cd1989027e77b277b0994e4fc02ed4e6492aabd83a0be66f14fdec56e60d9a41911ea1ff1ea70c9d957a87e46bcdb8fedd859f4988fe
   languageName: node
   linkType: hard
 
@@ -7249,7 +7249,7 @@ __metadata:
   resolution: "node-backend@workspace:."
   dependencies:
     "@apollo/server": 4.0.0
-    "@as-integrations/fastify": 1.1.0
+    "@as-integrations/fastify": 1.3.2
     "@luchanso/apollo-fastify": 0.10.0
     "@prisma/client": 4.4.0
     "@types/busboy": ^1
