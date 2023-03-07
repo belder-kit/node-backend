@@ -7281,7 +7281,7 @@ __metadata:
     passport-http-bearer: 1.0.1
     prisma: 4.4.0
     sharp: ^0.31.1
-    stripe: 10.14.0
+    stripe: 10.17.0
     ts-node: 10.9.1
     tslib: 2.4.0
     typescript: 4.7.4
@@ -9718,13 +9718,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stripe@npm:10.14.0":
-  version: 10.14.0
-  resolution: "stripe@npm:10.14.0"
+"stripe@npm:10.17.0":
+  version: 10.17.0
+  resolution: "stripe@npm:10.17.0"
   dependencies:
     "@types/node": ">=8.1.0"
     qs: ^6.11.0
-  checksum: 749fa60007f83877fa8b31fef0dae95fb267f02cb0dc5fcd216f5d376fa114d69da2b33a14212070f15c49f1c349b5c9b0e7510a42a077c288727ea903526b98
+  checksum: edcd7233416aa1a4dacb656276cf3c9f3b2a87387634c8c25b46b6ac3d6d5f373d0df5c115adcdcc2d78a8b83b1b92a065bb88937e5c741d19f3ffd7557c9db5
   languageName: node
   linkType: hard
 
