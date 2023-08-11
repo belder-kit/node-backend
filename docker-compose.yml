@@ -20,7 +20,7 @@ services:
       - app
   backend-database:
     container_name: backend-database
-    image: postgres:15.0-alpine
+    image: postgres:15.4-alpine
     ports:
       # throw database ports only for local access via ssh
       - "127.0.0.1:5432:5432"
