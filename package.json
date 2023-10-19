@@ -42,7 +42,7 @@
     "cuid": "^2.1.8",
     "debug": "4.3.4",
     "dotenv": "16.0.3",
-    "fastify": "4.9.1",
+    "fastify": "4.24.3",
     "graphql": "16.6.0",
     "invariant": "2.2.4",
     "minio": "^7.0.32",
